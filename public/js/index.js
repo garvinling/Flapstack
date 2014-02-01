@@ -66,14 +66,21 @@ FB.getLoginStatus(function(response) {
         if(!response.error && response)
         {
           console.log(response);
-          $("#location").text('Based out of: ' + response.location.name);
-
-
+          $("#location").text(': ' + response.location.name);
         }
+    });
 
+
+    FB.api('/me/picture',{width:"400",redirect:"false"},function(response){
+
+        //$("#profile_image").attr('src',response.data.url);
+        $("div#profile_image").css("background-image","url("+response.data.url+")");  
+
+        console.log(response.data.url);
 
 
     });
+
 
   } else if (response.status === 'not_authorized') {
     // the user is logged in to Facebook, 

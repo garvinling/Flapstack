@@ -15,6 +15,17 @@
 
 	font-family: 'Josefin',sans-serif;
 
-	
-	
+
+
+}
+
+#profile_image{
+   background: transparent
+   url(‘http://budd7.co.uk/wp-content/uploads/web-designer-from-lincoln.jpg’)
+   center center no-repeat;
+   background-size: 100%;
+   border-radius: 50%;
+   height: 200px; /*circle height*/
+   width: 200px; /*circle width*/
+   border: 6px solid white;
 }
