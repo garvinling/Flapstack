@@ -16,7 +16,7 @@ html,body{
     margin-top:70px;
     padding:0px;
     margin:0px;
-    background-image:url('img/blog_tablet.JPG');
+    background-image:url('img/group_landing.JPG');
     width:100%;
     height:100%;
     background-attachment:fixed; 
@@ -24,7 +24,7 @@ html,body{
 }
 
 #section_top_overlay {
-    background-color:rgba(0,0,0,0.3);
+    background-color:rgba(0,0,0,0.6);
     height:100%;
     width:100%;
     padding-top:30px;
@@ -74,6 +74,8 @@ h2{
 { 
 background-color:#27ae60;
 }
+
+
 
 #login_form_button{
 	background-color:#2ecc71;

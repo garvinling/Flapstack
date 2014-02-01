@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+
   
 	$("#title").hide().fadeIn(2000);
 	$("#subtext").hide().fadeIn(2900);

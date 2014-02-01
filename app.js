@@ -47,7 +47,7 @@ passport.use(new LocalStrategy(Account.authenticate()));
 passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
-mongoose.connect('mongodb://localhost/passport_local_mongoose');
+mongoose.connect('mongodb://localhost/Dashingly_users');
 
 require('./routes')(app);
 
