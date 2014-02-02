@@ -1,4 +1,4 @@
-Dashingly
+Flapstack
 ==========
 
 A social media dashboard built on NodeJS.
