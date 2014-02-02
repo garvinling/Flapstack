@@ -1,6 +1,20 @@
+html,body{
+    
+    background-color:white;
+    margin:0px;
+    height:1400px;
+    padding:0px;
+    overflow-x: hidden; 
+    overflow-y:scroll;
+
+}
+
+
+
 #title{
 
-	font-family: 'Josefin',sans-serif;
+	font-family: 'Open Sans',sans-serif;
+	font-weight: 300;
 }
 
 
@@ -8,24 +22,83 @@
 
 
 	padding:20px;
+	margin-left:100px;
+	max-width:450px;
+	margin-top:20px;
+	box-shadow: 10px 10px 5px #888888;
+	border:1px #bdc3c7 solid;
+
 
 }
 
-#location{
+#location,#friend_count{
 
-	font-family: 'Josefin',sans-serif;
-
-
-
+	/*font-family: 'Josefin',sans-serif;*/
+	font-family:'Open Sans',sans-serif;
+	font-weight:300;
+	color:gray;
 }
 
 #profile_image{
    background: transparent
-   url(‘http://budd7.co.uk/wp-content/uploads/web-designer-from-lincoln.jpg’)
+   url()
    center center no-repeat;
    background-size: 100%;
    border-radius: 50%;
    height: 200px; /*circle height*/
    width: 200px; /*circle width*/
    border: 6px solid white;
+}
+
+#notifications_title{
+
+	font-family: 'Open Sans',sans-serif;
+	font-weight: 300;
+}
+
+#data_content_1{
+
+	border:1px #bdc3c7 solid;
+	margin-top:20px;
+	box-shadow: 10px 10px 5px #888888;
+	border:1px #bdc3c7 solid;
+	height:450px;
+	max-height:800px;
+	width:400px;
+	overflow:scroll;
+	color:gray;
+	background-color:white;
+}
+
+#data_content_2{
+
+	border:1px #bdc3c7 solid;
+	margin-top:20px;
+	box-shadow: 10px 10px 5px #888888;
+	border:1px #bdc3c7 solid;
+	height:450px;
+	max-height:800px;
+	width:400px;
+	overflow:scroll;
+	margin-left:30px;
+	color:gray;
+		background-color:white;
+
+}
+
+
+#news_feed{
+	font-family:'Open Sans',sans-serif;
+	list-style-type:none;
+	padding:20px;
+
+}
+
+#
+
+#notify_feed{
+	font-family:'Open Sans',sans-serif;
+	list-style-type:none;
+	padding:20px;
+
 }
