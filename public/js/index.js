@@ -19,6 +19,9 @@ $(document).ready(function(){
     $('#loginbutton,#feedbutton').removeAttr('disabled');
   
 
+
+
+
  FB.login(function(response) {
    if (response.authResponse) 
    {
@@ -78,8 +81,9 @@ FB.getLoginStatus(function(response) {
         //console.log(response.data.url);
     });
 
-    FB.api('me/notifications',{until:'1391212800',limit:'9',include_read:'true'},function(response){
+    FB.api('me/notifications',{limit:'9',include_read:'true'},function(response){
         //console.log(response.data[0]);
+        console.log(response);
         sendNotification(response);
         //$("#header ul").append("<li>"+)
     });
@@ -100,6 +104,16 @@ FB.getLoginStatus(function(response) {
     });
 
 
+    FB.api('me/notifications',function(response){
+
+        $("#new_notifications").text(response.data.length +" new notifications");
+
+
+    });
+
+
+ 
+
 
   } 
   else if (response.status === 'not_authorized')
@@ -116,6 +130,26 @@ FB.getLoginStatus(function(response) {
   }
 
  });  //End FB.getLoginStatus
+
+  $("#post_status").click(function(){
+  
+
+   var post_message = $("textarea#status_content_text").val();
+  FB.api("/me/feed","POST",{"message": post_message},
+    function (response) {
+      if (response && !response.error) {
+        alert("Posted: " +post_message);
+        $("textarea#status_content_text").text("");
+        console.log(response);
+      }
+    }
+  );
+
+
+  });
+
+
+
 });
 
   function sendNotification(response){

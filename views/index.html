@@ -27,7 +27,7 @@
   </head>
   <body>
 
-        <div class="row">
+        <div class="row" style="">
                     <div class="col-md-6" style="width:500px;">
                     
                         <div id="profile_content">
@@ -35,7 +35,8 @@
                           <div id="profile_image">
                           </div>
 
-                          <h1 id="title"></h1><br>
+                          <h1 id="title"></h1>
+                          <h1 id="new_notifications"></h1><br>
                           <h4 id="location"></h4>
                           <h4 id="friend_count"></h4>
                           <br>
@@ -46,11 +47,8 @@
                      
                         <button type="submit" class="btn btn-warning">Post Status</button>&nbsp;
                         </form>-->
-                        <br><br><br><br>
+                        <br><br>
                         <a href="/logout"><button class="btn btn-primary">Log out</button></a>
-
-                  
-
                     </div>
 
 
@@ -64,10 +62,6 @@
                         
 
                         <ul data-role="listview" id="notify_feed">
-
-                          
-
-
                         </ul>
 
                         </div>
@@ -80,19 +74,24 @@
 
 
                         <ul data-role="listview" id="news_feed">
-
-                          
-
-
                         </ul>
-
-
-
                         </div>
                     
 
         </div>
- 
+
+         <div class="row" style="">
+                    <div class="col-md-6" style="width:800px;  height:300px; margin-left:390px; margin-top:-89px;">
+                        <div id="status_content">
+                        <div class="form-group">
+                        <textarea cols="70" rows="10" style="resize:none;" id="status_content_text" placeholder="What's on your mind?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-warning" id="post_status">Post Status</button>&nbsp;
+                        </form>
+                        <br><br>
+                    </div>
+                    </div>
+        </div>
 
 
 

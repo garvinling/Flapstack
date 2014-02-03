@@ -30,6 +30,25 @@ html,body{
 
 
 }
+#status_content{
+
+
+	padding:20px;
+	margin-left:100px;
+	max-width:630px;
+	margin-top:20px;
+	box-shadow: 10px 10px 5px #888888;
+	border:1px #bdc3c7 solid;
+
+
+}
+#status_content_text{
+	font-family: 'Open Sans',sans-serif;
+	border:1px #bdc3c7 solid;
+
+
+
+}
 
 #location,#friend_count{
 
@@ -94,7 +113,13 @@ html,body{
 
 }
 
-#
+#new_notifications{
+
+	font-family:'Open Sans',sans-serif;
+	color:gray;
+	font-weight:300;
+
+}
 
 #notify_feed{
 	font-family:'Open Sans',sans-serif;
