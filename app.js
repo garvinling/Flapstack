@@ -26,7 +26,7 @@ app.use(express.cookieParser("thissecretrocks"));
 
 app.use(express.bodyParser());
 app.use(express.methodOverride());
-app.use(express.session({ secret: 'thissecretrocks', cookie: { maxAge: 60000 } }));
+app.use(express.session({ secret: 'thissecretrocks', cookie: { maxAge: 3600000 } }));   //Session is good for an hour
 
 app.use(passport.initialize());
 app.use(passport.session());

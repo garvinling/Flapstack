@@ -68,7 +68,22 @@ h2{
 	font-family: 'Freight',sans-serif;
 
 }
+#tour_button{
 
+	background-color:#2ecc71;
+	border:#2ecc71;
+	width:200px;
+	height:43px;
+	font-size:18px;
+	font-family: 'Freight',sans-serif;
+
+}
+
+#tour_button:hover{
+
+	background-color:#27ae60;
+
+}
 
 #login_button:hover
 { 

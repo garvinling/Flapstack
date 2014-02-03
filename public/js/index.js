@@ -2,9 +2,12 @@
 $(document).ready(function(){
 
 
+
+
+
     $( "#data_content_1" ).draggable();
     $( "#data_content_2").draggable();
-
+    $( "#status_content").draggable();
 
   $.ajaxSetup({ cache: true });
   
@@ -133,22 +136,24 @@ FB.getLoginStatus(function(response) {
 
   $("#post_status").click(function(){
   
+      var post_message = $("textarea#status_content_text").val();
+      FB.api("/me/feed","POST",{"message": post_message},
+        function (response) {
+          if (response && !response.error) {
+            alert("Posted: " +post_message);
+            $("textarea#status_content_text").text("");
+            console.log(response);
+          }
+        }
+      );
+  });
 
-   var post_message = $("textarea#status_content_text").val();
-  FB.api("/me/feed","POST",{"message": post_message},
-    function (response) {
-      if (response && !response.error) {
-        alert("Posted: " +post_message);
-        $("textarea#status_content_text").text("");
-        console.log(response);
-      }
-    }
-  );
+  $("#test").click(function(){
+
+        $("#data_content_1").offset({left:22,top:0});
 
 
   });
-
-
 
 });
 
@@ -158,7 +163,7 @@ FB.getLoginStatus(function(response) {
         
         var from = response.data[i].from.name;
         //console.log("FOUND:"+response.data[i].title);
-        $("#notify_feed").append("<li id=\"notification"+i+"\"> <code>"+from+"</code>"+response.data[i].title+"</li><br>");
+        $("#notify_feed").append("<li id=\"notification"+i+"\"> <code>"+from+"</code> "+response.data[i].title+"</li><br>");
         $("#notification"+i).hide().fadeIn(1300+(500*i));
     }
   }//end sendNotification
@@ -174,7 +179,7 @@ FB.getLoginStatus(function(response) {
               //news item is a status update.
               var post_message = response.data[i].message;
               var from = response.data[i].from.name;
-              $("#news_feed").append("<li id=\"post"+i+"\"> <code>"+from+"</code>"+post_message+"</li><br>");
+              $("#news_feed").append("<li id=\"post"+i+"\"> <code>"+from+"</code> "+post_message+"</li><br>");
 
           }
           else

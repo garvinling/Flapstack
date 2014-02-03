@@ -5,6 +5,7 @@ $(document).ready(function(){
 	$("#title").hide().fadeIn(2000);
 	$("#subtext").hide().fadeIn(2900);
 	$("#login_button").hide().fadeIn(2000);
+  $("#tour_button").hide().fadeIn(3300);
 
   $("#login_button").click(function(){
 
